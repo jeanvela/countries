@@ -1,0 +1,41 @@
+.footer {
+    margin-top: 30px;
+    background: #131316;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    position: absolute;
+    /* left: 0; */
+    bottom: 0;
+    width: 100%;
+   
+} 
+
+.container{
+    background: none;
+    color: #fff;
+}
+
+.link{
+    color: #fff;
+}
+
+.container__lindln{
+    background: #fff;
+    padding: 5px;
+}
+
+.lindln {
+    color: #000 ;
+}
+.container__lindln:hover {
+    background: #023e8a;
+    transition: all ease 1s;
+}
+
+.lindln:hover {
+    color: #fff;
+    transition: all ease-out 1s;
+}

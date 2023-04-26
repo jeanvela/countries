@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.input {
+    outline: none;
+    background: none;
+    color: #ffffff;
+    border: solid 3px #00253e;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.btn {
+    padding: 5px 5px;
+    width: 70px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #002945;
+    border: none;
+    color: #fff;
+}

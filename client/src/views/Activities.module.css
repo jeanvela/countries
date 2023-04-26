@@ -1,0 +1,63 @@
+.container {
+    padding-top: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.links {
+    width: 60%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 800;
+    background: blue;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.box {
+    background: rgb(33, 47, 61 , 0.4);
+    width: 60%;
+    max-width: 1400px;
+    border-radius: 15px;
+    overflow-y: auto;
+    max-height: 500px;
+    padding: 15px;
+}
+
+.container_activities {
+    margin: 10px;
+    padding: 10px 0;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    background: rgb(70, 10, 16, 0.7);;
+    border-radius: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn_delete {
+    color: #fff;
+    background-color: #e63946;
+    border: none;
+    padding: 3px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 700;
+}

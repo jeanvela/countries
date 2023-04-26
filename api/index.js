@@ -19,9 +19,13 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
+// importamos la funcion quen nos guarda la info de la api en la base de datos
+const saveApiDb = require('./src/controllers/saveApi.js')
 
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
+conn.sync({ force: false }).then(async () => {
+  // ejecutamos la funcion con asunc await ya que es una promesa
+  await saveApiDb()
   server.listen(3001, () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
   });

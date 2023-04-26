@@ -1,0 +1,83 @@
+.container {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn {
+    border-radius: 15px;
+    border: none;
+    width: 250px;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    background: #000d38;
+    color: #fff;
+}
+
+.container_card {
+    background: transparent;
+    border: solid 4px #000d38;
+    border-radius: 15px;
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.codigo {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.nom_pais {
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.img {
+    width: 75%;
+    height: 65%;
+}
+
+.continent {
+    font-size: 1.3rem
+}
+
+.info {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.container__activities {
+    color: #fff;
+    background: transparent;
+    border: solid 4px #000d38;
+    border-radius: 10px;
+    padding: 10px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.pa__ac {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+}

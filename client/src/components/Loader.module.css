@@ -1,0 +1,22 @@
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loader__bar {
+    width: 10px;
+    height: 40px;
+    margin: 0 5px;
+    background-color: #fff;
+    animation: loaderAnimation 1s infinite alternate;
+  }
+  
+  @keyframes loaderAnimation {
+    from {
+      transform: scale(1, 0.4);
+    }
+    to {
+      transform: scale(1, 1.2);
+    }
+  }
