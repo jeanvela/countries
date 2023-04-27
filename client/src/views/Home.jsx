@@ -1,3 +1,4 @@
+import React from "react"
 import { useState, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { getCountries, filterContinent, ascOdesc, filterPopulation } from "../redux/actions"
@@ -131,7 +132,7 @@ const Home = () => {
                     }
                 </div>
             </div>
-             <Footer/>
+            <Footer/>
         </>
     )
 }

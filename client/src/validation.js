@@ -27,6 +27,12 @@ const validation = (input,errorsState) => {
    } else {
     errors.duration = ''
    }
+
+   if (!input.season) {
+    errors.season = 'Elije una opcion'
+   } else {
+    errors.season = ''
+   }
     return errors
 }
 

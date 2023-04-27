@@ -13,7 +13,6 @@ const findCountryById = async (id) => {
             }
         }
     })
-    //VALIDAR
     return country
 }
 

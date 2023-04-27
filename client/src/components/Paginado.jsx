@@ -1,3 +1,4 @@
+import React from 'react'
 import style from './Paginado.module.css'
 
 // * lo que resivo por parametro me los traigo del otro componente
@@ -17,9 +18,7 @@ const Paginado = ({countriesPerPage,allCountries,paginado}) => {
                 { // ! si tengo pageNums entonces lo mapeo y  que me devuelva cada uno de los numeros que me devuelva el paginado
                     pageNums && pageNums.map(num => {
                         return (
-                            // <div key={num}>
-                                <button className={style.btn_paginado} onClick={() => paginado(num)}>{num}</button>
-                            //* </div> */}
+                            <button className={style.btn_paginado}  onClick={() => paginado(num)}>{num}</button>
                         )
                     })
                 }

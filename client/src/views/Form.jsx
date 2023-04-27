@@ -1,3 +1,4 @@
+import React from "react"
 import { useState, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import {useDispatch, useSelector } from 'react-redux'
@@ -24,6 +25,7 @@ const Form = () => {
         name: '',
         difficulty: '',
         duration: '',
+        season: ''
     })
 
     const handleChange = (event) => {
@@ -35,12 +37,12 @@ const Form = () => {
     }
 
     const handleCheck = (event) => {
-        if (event.target.checked) { // si el input esta chekeado pasale lo que esta check
+        // if (event.target.checked) { // si el input esta chekeado pasale lo que esta check
             setInput({
                 ...input,
                 season: event.target.value
             })
-        }
+        // }
     }
 
     const handleSelect = (event) => {
@@ -61,6 +63,13 @@ const Form = () => {
             duration: '',
             season: '',
             countries: []
+        })
+    }
+
+    const handlereset = (id) => {
+        setInput({
+            ...input,
+            countries: input.countries.filter(e => e !== id)
         })
     }
 
@@ -111,21 +120,22 @@ const Form = () => {
                     </div>
                     <div className={style.selects_container}>
                         <label>
-                            <input type="checkbox" value='Summer' name="Summer" onChange={e => handleCheck(e)}/>
+                            <input type="checkbox" value='Summer' name="Summer" checked={input.season === 'Summer'} onChange={e => handleCheck(e)}/>
                             Summer
                         </label>
                         <label>
-                            <input type="checkbox" value='Autumn' name="Autumn" onChange={e => handleCheck(e)}/>
+                            <input type="checkbox" value='Autumn' name="Autumn" checked={input.season === 'Autumn'} onChange={e => handleCheck(e)}/>
                             Autumn
                         </label>
                         <label>
-                            <input type="checkbox" value='Winter' name="Winter" onChange={e => handleCheck(e)}/>
+                            <input type="checkbox" value='Winter' name="Winter" checked={input.season === 'Winter'} onChange={e => handleCheck(e)}/>
                             Winter
                         </label>
                         <label>
-                            <input type="checkbox" value='Spring' name="Spring" onChange={e => handleCheck(e)}/>
+                            <input type="checkbox" value='Spring' name="Spring" checked={input.season === 'Spring'} onChange={e => handleCheck(e)}/>
                             Spring
                         </label>
+                        <p className={style.errors}>{errors.season}</p>
                     </div>
                     
                 </div>
@@ -138,9 +148,21 @@ const Form = () => {
                         })
                     }
                 </select>
-                <button className={style.submit} type="submit" disabled={
-                    errors.name || errors.difficulty || errors.duration
-                    ? true : false
+                <div>
+                    <ul>
+                        {
+                            input.countries.map(e => {
+                                return (
+                                    <>
+                                        <li>{e} <button type="reset" onClick={() => handlereset(e)}>x</button></li>
+                                    </>
+                                )
+                            })
+                        }
+                    </ul>
+                </div>
+                <button className={style.submit} type="submit" 
+                disabled={errors.name || errors.difficulty || errors.duration || !input.season || !input.name || !input.duration || !input.difficulty ? true : false
                     }>Crear</button>
                 </>}
             </form>

@@ -1,3 +1,4 @@
+import React from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { getAllActivities } from '../redux/actions'
 import { useEffect, useState } from "react"
